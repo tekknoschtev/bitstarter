@@ -77,7 +77,9 @@ if(require.main == module) {
         .parse(process.argv);
     
     if (program.url) {
-        console.log(getHtmlString(program.url));
+        rest.get(program.url).on('complete', function(data) {
+            console.log(data);
+        });
     } else {
         var checkJson = checkHtmlFile(program.file, program.checks);
         var outJson = JSON.stringify(checkJson, null, 4);
