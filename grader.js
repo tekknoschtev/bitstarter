@@ -42,6 +42,10 @@ var cheerioHtmlFile = function(htmlfile) {
     return cheerio.load(fs.readFileSync(htmlfile));
 };
 
+var cheerioHtmlString = function(htmlString) {
+    return cheerio.load(htmlString);
+};
+
 var getHtmlString = function(url) {
     rest.get(url).on('complete', function(data) {
         return data;
@@ -65,7 +69,7 @@ var checkHtmlFile = function(htmlfile, checksfile) {
 };
 
 var checkHtmlString = function(htmlString, checksfile) {
-    $ = htmlString;
+    $ = cheerioHtmlString(htmlString);
     var checks = loadChecks(checksfile).sort();
     var out = {};
     for(var ii in checks) {
