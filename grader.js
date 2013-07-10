@@ -103,8 +103,8 @@ if(require.main == module) {
         var htmlString = ''
         rest.get(program.url).on('complete', function(data) {
             var htmlString = data;
+            var checkJson = checkHtmlString(htmlString, program.checks);
         });
-        var checkJson = checkHtmlString(htmlString, program.checks);
     } else {
         var checkJson = checkHtmlFile(program.file, program.checks);
     }
