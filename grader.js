@@ -82,7 +82,7 @@ if(require.main == module) {
     }
     else if(program.url) {
         rest.get(url).on('complete', function(data) {
-            html = data;
+            html = data; 
         })
     }
 
