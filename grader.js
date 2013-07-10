@@ -70,6 +70,7 @@ var checkHtmlFile = function(htmlfile, checksfile) {
 
 var checkHtmlString = function(htmlString, checksfile) {
     $ = cheerioHtmlString(htmlString);
+    console.log($);
     var checks = loadChecks(checksfile).sort();
     var out = {};
     for(var ii in checks) {
