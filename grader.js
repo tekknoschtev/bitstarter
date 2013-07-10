@@ -100,16 +100,17 @@ if(require.main == module) {
         .parse(process.argv);
     
     if (program.url) {
-        var htmlString = ''
         rest.get(program.url).on('complete', function(data) {
-            var htmlString = data;
-            var checkJson = checkHtmlString(htmlString, program.checks);
+            var checkJson = checkHtmlString(data, program.checks);
+            var outJson = JSON.stringify(checkJson, null, 4);
+            console.log(outJson);
         });
     } else {
         var checkJson = checkHtmlFile(program.file, program.checks);
+        var outJson = JSON.stringify(checkJson, null, 4);
+        console.log(outJson);
     }
-    var outJson = JSON.stringify(checkJson, null, 4);
-    console.log(outJson);
+    
 } else {
     exports.checkHtmlFile = checkHtmlFile;
 }
