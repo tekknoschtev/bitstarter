@@ -42,7 +42,7 @@ var cheerioHtmlFile = function(htmlfile) {
     return cheerio.load(fs.readFileSync(htmlfile));
 };
 
-var getUrlString = function(url) {
+var getHtmlString = function(url) {
     rest.get(url).on('complete', function(data) {
         return data;
     });
@@ -77,7 +77,7 @@ if(require.main == module) {
         .parse(process.argv);
     
     if (program.url) {
-        console.log(program.url);
+        console.log(getHtmlString(program.url));
     } else {
         var checkJson = checkHtmlFile(program.file, program.checks);
         var outJson = JSON.stringify(checkJson, null, 4);
