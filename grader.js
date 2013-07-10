@@ -63,7 +63,7 @@ var checkHtmlFile = function(htmlfile, checksfile) {
     return out;
 };
 
-var checkHtmlString = function(htmlString, checksFile) {
+var checkHtmlString = function(htmlString, checksfile) {
     $ = htmlString;
     var checks = loadChecks(checksfile).sort();
     var out = {};
