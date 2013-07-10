@@ -88,9 +88,11 @@ if(require.main == module) {
         .parse(process.argv);
     
     if (program.url) {
+        var htmlString = ''
         rest.get(program.url).on('complete', function(data) {
-            var checkJson = checkHtmlString(data, program.checks);
+            var htmlString = data;
         });
+        var checkJson = checkHtmlString(htmlString, program.checks);
     } else {
         var checkJson = checkHtmlFile(program.file, program.checks);
     }
