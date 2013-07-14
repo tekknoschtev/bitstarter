@@ -4,14 +4,100 @@
         <meta charset="utf-8">
         <title>My First Bitstarter</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="./css/bootstrap-combined.no-icons.min.css">
-        <link rel="stylesheet" href="./css/font-awesome.min.css">
-        <link rel="stylesheet" href="./css/bitstarter.css">
-        <link rel="stylesheet" href="./css/bootstrapsocialbuttons.css">
-        <script src="./js/jquery.js"></script>
-        <script src="./js/bootstrap.js"></script>
         <link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700,300italic,400italic,500italic,700italic' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap-combined.no-icons.min.css">
+        <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css">
+        <link rel="stylesheet" href="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fsocial-buttons.css">    
+        <script src="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fjquery.js"></script>
+        <script src="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap.js"></script>
+        <link href="http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700,300italic,400italic,500italic,700italic" rel="stylesheet" type="text/css">
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,300,400,600,700,800"  rel="stylesheet" type="text/css">
+        <style type="text/css">
+            /* Large desktop */
+            @media (min-width: 980px) { 
+              body {
+               padding-top: 60px;
+              }
+             .linediv-l {
+               border-right: 1px white solid;
+              }
+             .linediv-r {
+               border-left: 1px white solid;
+             }
+            }
+
+            /* Landscape phones and down */
+            @media (max-width: 480px) { 
+             .copy {
+               padding: 2.5% 10%;
+             }
+             .linediv-l {
+               border-bottom: 1px white solid;
+             }
+             .linediv-r {
+               border-top: 1px white solid;
+             }
+            }
+
+            /* All form factors */
+
+            /* Main body and headings */
+            body{
+              font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+            }
+            .heading, .subheading {
+              font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
+              text-align: center;
+            }
+            p.lead {
+              padding-top: 1.5%;
+              font-size: 24px;
+              line-height: 30px;
+            }
+            p {
+              font-size: 18px;
+              line-height: 24px;
+            }
+
+            /* Video pitch and Action */
+            .pitch {
+              padding: 2.5% 0%;
+            }
+            .order {
+              padding: 2% 0%;
+            }
+            .actions {
+              background-color: #343434;
+              padding: 3% 0%;
+            }
+            .video, .thermometer, .order, .social, .statistics {
+              text-align: center;
+            }
+            .statistics h3, .statistics p {
+              color: white;
+            }
+
+            /* Marketing Copy and Footer */
+            .copy {
+              padding-top: 2.5%;
+              padding-bottom: 2.5%;
+              text-align: justify;
+            }
+            .asset {
+              padding: 2.5% 0%;
+            }
+            .footer {
+              color: #cccccc;
+              text-align: center;
+            }
+            .footer p {
+              font-size: 11px;
+            }
+            .footer a {
+              color: #ccccff;
+            }
+            </style>
     </head>
     <body>
         <div class="navbar navbar-inverse navbar-fixed-top">
@@ -128,33 +214,35 @@
             
             <div class="row-fluid faq">
                 <div class="span10 offset1">
-                    <h3>FAQ</h3>
-                    <div class="accordian" id="accordian2">
-                        <div class="accordian-group">
-                            <div class="accordian-heading">
-                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordian2" href="#collapseOne">
-                                    What does FAQ stand for?
-                                </a>
-                            </div>
-                            <div id="collapseOne" class="accordian-body collapse">
-                                <div class="accordian-inner">
-                                    Frequently Asked Question.
-                                </div>
-                            </div>
+                  <h3>FAQ</h3>
+                  <div class="accordion" id="accordion2">
+                    <div class="accordion-group">
+                      <div class="accordion-heading">
+                        <a class="accordion-toggle" data-toggle="collapse"
+                           data-parent="#accordion2" href="#collapseOne">
+                          What does FAQ stand for?
+                        </a>
+                      </div>
+                      <div id="collapseOne" class="accordion-body collapse">
+                        <div class="accordion-inner">
+                          Frequently Asked Question.
                         </div>
-                        <div class="accordian-group">
-                            <div class="accordian-heading">
-                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordian2" href="#collapseOne">
-                                    What is a Frequently Asked Question?
-                                </a>
-                            </div>
-                            <div id="collapseOne" class="accordian-body collapse">
-                                <div class="accordian-inner">
-                                    A question which is commonly asked by users
-                                </div>
-                            </div>
-                        </div>
+                      </div>
                     </div>
+                    <div class="accordion-group">
+                      <div class="accordion-heading">
+                        <a class="accordion-toggle" data-toggle="collapse"
+                           data-parent="#accordion2" href="#collapseTwo">
+                          What's a Frequently Asked Question?
+                        </a>
+                      </div>
+                      <div id="collapseTwo" class="accordion-body collapse">
+                        <div class="accordion-inner">
+                          A question which is commonly asked by users.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
             </div>
             
